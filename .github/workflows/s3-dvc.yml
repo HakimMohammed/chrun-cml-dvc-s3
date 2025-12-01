@@ -60,9 +60,9 @@ jobs:
 
       - name: Publish CML Report
         run: |
-          echo "# Model Report" > report.md
-          echo "## Metrics" >> report.md
-          awk ’NR%4{print " " $0}{print ""}’ metrics.txt >> report.md
-          echo "## Confusion Matrix" >> report.md
-          echo "![](./ conf_matrix . png ) " >> report . md
-          cml comment create report.md
+          echo "# Model Report" > README.md
+          echo "## Metrics" >> README.md
+          awk ’NR%4{print " " $0}{print ""}’ metrics.txt >> README.md
+          echo "## Confusion Matrix" >> README.md
+          echo "![](./conf_matrix.png)" >> README.md
+          cml comment create README.md
