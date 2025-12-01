@@ -34,8 +34,6 @@ jobs:
           dvc remote modify --local s3remote access_key_id ${{ secrets.ACCESS_KEY_ID }}
           dvc remote modify --local s3remote secret_access_key ${{ secrets.SECRET_ACCESS_KEY }}
           dvc remote modify --local s3remote region ${{ secrets.REGION }}
-
-#          Analytic Utility
           dvc remote list
           dvc config --local
 
