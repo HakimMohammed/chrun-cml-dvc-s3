@@ -35,7 +35,7 @@ jobs:
           dvc remote modify --local s3remote secret_access_key ${{ secrets.SECRET_ACCESS_KEY }}
           dvc remote modify --local s3remote region ${{ secrets.REGION }}
           dvc remote list
-          dvc config --local
+          dvc config --local --list
 
       - name: Pull Data & Models from DVC Remote ( S3 Bucket )
         run: dvc pull -v
