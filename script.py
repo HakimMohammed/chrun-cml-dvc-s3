@@ -1,18 +1,27 @@
-import joblib
-import numpy as np
-import pandas as pd
-import matplotlib.pyplot as plt
-import seaborn as sns
-import os
-from imblearn.over_sampling import SMOTE
-from PIL import Image
+# sickit-learn
 from sklearn.model_selection import train_test_split
 from sklearn.impute import SimpleImputer
 from sklearn.preprocessing import OneHotEncoder, StandardScaler
 from sklearn.pipeline import Pipeline, FeatureUnion
-from sklearn_features.transformers import DataFrameSelector
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import f1_score, confusion_matrix
+# sickit_features
+from sklearn_features.transformers import DataFrameSelector
+# matplotlib
+import matplotlib.pyplot as plt
+# seaborn
+import seaborn as sns
+# pandas
+import pandas as pd
+# numpy
+import numpy as np
+# joblib
+import joblib
+# imbalanced-learn
+from imblearn.over_sampling import SMOTE
+
+import os
+from PIL import Image
 from pathlib import Path
 
 clf_name = ""
