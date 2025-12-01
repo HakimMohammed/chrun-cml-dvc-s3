@@ -60,7 +60,7 @@ jobs:
         run: |
           echo "# Model Report" > README.md
           echo "## Metrics" >> README.md
-          awk ’NR%4{print " " $0}{print ""}’ metrics.txt >> README.md
+          awk 'NR%4{print " " $0}{print ""}' metrics.txt
           echo "## Confusion Matrix" >> README.md
           echo "![](./conf_matrix.png)" >> README.md
           cml comment create README.md
