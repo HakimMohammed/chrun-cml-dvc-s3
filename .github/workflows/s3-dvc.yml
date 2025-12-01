@@ -38,7 +38,10 @@ jobs:
           dvc config --local --list
 
       - name: Pull Data & Models from DVC Remote ( S3 Bucket )
-        run: dvc pull -v
+        run: |
+          mkdir data
+          mkdir models
+          dvc pull -v
 
       - name: Train / Evaluate Model
         run: python script.py
